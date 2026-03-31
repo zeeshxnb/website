@@ -14,10 +14,10 @@ import type { TimelineEvent } from "@/lib/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
 const TYPE_CONFIG = {
-  education:   { icon: GraduationCap, color: "#3b82f6" },
-  work:        { icon: Briefcase,      color: "#10b981" },
-  project:     { icon: FolderOpen,     color: "#a78bfa" },
-  achievement: { icon: Star,           color: "#f59e0b" },
+  education:   { icon: GraduationCap, color: "#3b82f6", label: "education" },
+  work:        { icon: Briefcase,      color: "#10b981", label: "work" },
+  project:     { icon: FolderOpen,     color: "#a78bfa", label: "project" },
+  achievement: { icon: Star,           color: "#f59e0b", label: "leadership" },
 };
 
 function TimelineEntry({
@@ -33,7 +33,7 @@ function TimelineEntry({
   const [mouse, setMouse] = useState({ x: -999, y: -999 });
   const [hovering, setHovering] = useState(false);
   const shouldReduce = useReducedMotion();
-  const { icon: Icon, color } = TYPE_CONFIG[event.type];
+  const { icon: Icon, color, label: typeLabel } = TYPE_CONFIG[event.type];
 
   const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -118,7 +118,7 @@ function TimelineEntry({
                     border: `1px solid ${color}30`,
                   }}
                 >
-                  {event.type}
+                  {typeLabel}
                 </span>
               </div>
               <h3 className="font-semibold text-sm mb-0.5" style={{ color: "var(--text)" }}>

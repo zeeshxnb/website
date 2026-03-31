@@ -24,13 +24,21 @@ const XIcon = () => (
 import { personalInfo } from "@/lib/data";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
+// Split so the address never appears as a literal string in rendered HTML
+const EP = ["zbabul", "uci", "edu"];
+const getEmail = () => `${EP[0]}@${EP[1]}.${EP[2]}`;
+
 export default function Contact() {
   const [copied, setCopied] = useState(false);
   const shouldReduce = useReducedMotion();
 
+  const openEmail = () => {
+    window.location.href = `mailto:${getEmail()}`;
+  };
+
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText(personalInfo.email);
+      await navigator.clipboard.writeText(getEmail());
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
@@ -98,8 +106,8 @@ export default function Contact() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <a
-            href={`mailto:${personalInfo.email}`}
+          <button
+            onClick={openEmail}
             className="px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300"
             style={{ background: "var(--blue-accent)", color: "#fff" }}
             onMouseEnter={(e) => {
@@ -117,9 +125,9 @@ export default function Contact() {
               <Mail size={14} />
               Say Hello
             </span>
-          </a>
+          </button>
 
-          {/* Copy email button */}
+          {/* Copy email — label only, email assembled on click */}
           <button
             onClick={copyEmail}
             className="flex items-center gap-2 px-4 py-3 rounded-full text-sm transition-all duration-200"
@@ -147,7 +155,7 @@ export default function Contact() {
             ) : (
               <>
                 <Copy size={13} />
-                {personalInfo.email}
+                Copy email
               </>
             )}
           </button>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { MapPin, GraduationCap, Trophy, Users } from "lucide-react";
 import { personalInfo } from "@/lib/data";
@@ -85,38 +86,29 @@ export default function About() {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <div className="relative">
-              {/* Outer glow ring */}
-              <div
-                className="absolute inset-0 rounded-full"
-                style={{
-                  background:
-                    "conic-gradient(from 0deg, var(--blue-accent), transparent 50%, var(--blue-mid) 100%)",
-                  padding: "2px",
-                  borderRadius: "50%",
-                  filter: "blur(1px)",
-                }}
-              />
               {/* Avatar circle */}
               <div
                 className="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden"
                 style={{
-                  border: "2px solid rgba(59,130,246,0.3)",
-                  background:
-                    "radial-gradient(circle at 30% 30%, rgba(29,78,216,0.3), var(--surface))",
+                  border: "2px solid rgba(59,130,246,0.4)",
+                  boxShadow:
+                    "0 0 0 4px rgba(59,130,246,0.08), 0 0 40px rgba(59,130,246,0.25)",
                 }}
               >
-                {/* Placeholder — replace with <Image> once you have a photo */}
-                <div className="w-full h-full flex items-center justify-center">
-                  <span
-                    className="text-6xl font-bold"
-                    style={{ color: "rgba(59,130,246,0.4)" }}
-                  >
-                    {personalInfo.initials}
-                  </span>
-                </div>
+                <Image
+                  src="/headshot.jpg"
+                  alt={personalInfo.name}
+                  fill
+                  style={{
+                    objectFit: "cover",
+                    objectPosition: "center",
+                  }}
+                  sizes="(max-width: 640px) 224px, 256px"
+                  priority
+                />
               </div>
 
-              {/* Decorative dot grid behind avatar */}
+              {/* Decorative dot grid behind card */}
               <div
                 className="absolute -bottom-4 -right-4 w-24 h-24 pointer-events-none"
                 style={{
