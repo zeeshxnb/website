@@ -13,9 +13,9 @@ export default function Home() {
       <main>
         <Hero />
         <div className="section-divider" />
-        <Timeline />
-        <div className="section-divider" />
         <About />
+        <div className="section-divider" />
+        <Timeline />
         <div className="section-divider" />
         <Skills />
         <div className="section-divider" />

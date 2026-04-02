@@ -21,14 +21,14 @@ const INTERESTS = [
     icon: Activity,
     color: "#3b82f6",
     image: "/interests/running.jpg",
-    blurb: "I've completed two half marathons and I'm currently training for an Ironman. Running is my reset button — nothing beats early morning miles before the day starts.",
+    blurb: "My most recently picked up hobby. I started in summer of 2025 and ran my first half marathon in November on Catalina Island. I want to work my way up to competing in an Ironman in 2030.",
   },
   {
     label: "Photography",
     icon: Camera,
     color: "#a78bfa",
     image: "/interests/photography.jpg",
-    blurb: "I shoot street and travel photography. Capturing a single frame that tells a whole story is something I'm always chasing.",
+    blurb: "I try to take photos whenever I can and I'm still finding a niche that I like. Here is the best photo I have taken so far (and probably will for a while).",
   },
   {
     label: "Basketball",
@@ -36,7 +36,7 @@ const INTERESTS = [
     color: "#f97316",
     image: "/interests/basketball.jpg",
     objectPosition: "50% 25%",
-    blurb: "Grew up playing pick-up basketball and still get on the court whenever I can. The mix of competition, flow state, and teamwork keeps me coming back.",
+    blurb: "I've been playing basketball ever since my dad got me a mini hoop at the age of 4. I don't have any cool photos of me playing, so here's one of when I met Charles Barkley in a Target.",
   },
   {
     label: "Food",
@@ -44,14 +44,14 @@ const INTERESTS = [
     color: "#f59e0b",
     image: "/interests/food.jpg",
     objectPosition: "50% 65%",
-    blurb: "Always on the hunt for the best spots — hidden gem taco trucks, hyped ramen joints, anything worth driving for. Food is how I explore new places and cultures.",
+    blurb: "I just really like food.",
   },
   {
     label: "Cooking",
     icon: ChefHat,
     color: "#10b981",
     image: "/interests/cooking.jpg",
-    blurb: "I cook most of my own meals and love building something from scratch. Currently obsessed with perfecting homemade pasta and experimenting with new spice combinations.",
+    blurb: "I can cook too!",
   },
 ];
 

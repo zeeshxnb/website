@@ -4,7 +4,7 @@ export const personalInfo: PersonalInfo = {
   name: "Zeeshan Babul",
   initials: "ZB",
   tagline: "Data Science student at UC Irvine, building at the intersection of ML and software.",
-  bio: "I study Data Science at UC Irvine (graduating June 2027) and spend most of my time building things that sit at the edge of machine learning and engineering. I have shipped a Bayesian-optimized trading algorithm, mapped fast food access for 6.8M students, analyzed 3D cell imaging data, and built products people actually use. Currently VP of Data@UCI and always working on something new.",
+  bio: "I study Data Science at UC Irvine (graduating June 2027) and spend most of my time building things that sit at the edge of machine learning and engineering. I have shipped a Bayesian-optimized trading algorithm, mapped fast food access for 6.8M students, analyzed 3D cell imaging data, and built products people actually use. Currently VP of Data@UCI and always working on something new. Outside of school, I enjoy working out, playing basketball, and get into way too many random hobbies. Scroll down to see all of them!",
   status: "B.S. Data Science @ UC Irvine, Class of 2027",
   email: "zbabul@uci.edu",
   github: "https://github.com/zeeshxnb",
@@ -61,7 +61,7 @@ export const timelineEvents: TimelineEvent[] = [
     type: "education",
     summary: "GPA: 3.7 · Dean's Honor List, 5x · Expected June 2027.",
     details:
-      "Studying Data Science with coursework in Machine Learning and Data Mining, Neural Networks and Deep Learning, Statistical Data Analysis, Data Structures, Algorithm Analysis, Data Management, and Information Retrieval. Dean's Honor List for five consecutive quarters.",
+      "Studying Data Science with coursework in Machine Learning and Data Mining, Neural Networks and Deep Learning, Statistical Data Analysis, Data Structures, Algorithm Analysis, Data Management, and Information Retrieval.",
   },
 ];
 
