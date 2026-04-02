@@ -35,3 +35,10 @@ export interface Project {
   live?: string;
   featured?: boolean;
 }
+
+export interface Book {
+  title: string;
+  author: string;
+  isbn?: string;
+  coverUrl?: string;
+}

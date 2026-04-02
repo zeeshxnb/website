@@ -1,4 +1,4 @@
-import type { PersonalInfo, TimelineEvent, SkillCategory, Project } from "./types";
+import type { PersonalInfo, TimelineEvent, SkillCategory, Project, Book } from "./types";
 
 export const personalInfo: PersonalInfo = {
   name: "Zeeshan Babul",
@@ -86,6 +86,40 @@ export const skillCategories: SkillCategory[] = [
     name: "DevOps and Tools",
     skills: ["AWS", "Docker", "Git", "GitHub Actions", "CI/CD", "Jupyter", "Tableau", "Power BI"],
   },
+];
+
+export const books: Book[] = [
+  { title: "Think and Grow Rich", author: "Napoleon Hill", isbn: "9781585424337" },
+  { title: "Hamlet", author: "William Shakespeare", isbn: "9780743477123" },
+  { title: "Getting to Yes", author: "Roger Fisher & William Ury" },
+  { title: "Stop Overthinking", author: "Nick Trenton", isbn: "9781647432508" },
+  { title: "Meditations", author: "Marcus Aurelius", isbn: "9780812968255" },
+  { title: "How to Win at College", author: "Cal Newport" },
+  { title: "Essentialism", author: "Greg McKeown", isbn: "9780804137386" },
+  { title: "How to Read Literature Like a Professor", author: "Thomas C. Foster" },
+  { title: "The Namesake", author: "Jhumpa Lahiri", isbn: "9780395927212" },
+  { title: "Why We Sleep", author: "Matthew Walker", isbn: "9781501144325" },
+  { title: "Fahrenheit 451", author: "Ray Bradbury", isbn: "9781451673319" },
+  { title: "The 4-Hour Workweek", author: "Timothy Ferriss", isbn: "9780307465351" },
+  { title: "The Book of Joy", author: "Dalai Lama & Desmond Tutu", isbn: "9780399185045" },
+  { title: "Can't Hurt Me", author: "David Goggins", isbn: "9781544512280" },
+  { title: "The Practicing Stoic", author: "Ward Farnsworth", isbn: "9781567926118" },
+  { title: "Breath", author: "James Nestor", isbn: "9780735213616" },
+  { title: "The Art of Impossible", author: "Steven Kotler", isbn: "9780062977533" },
+  { title: "The Sixth Man", author: "Andre Iguodala", isbn: "9780525533986" },
+  { title: "The Knack", author: "Norm Brodsky & Bo Burlingham", coverUrl: "https://books.google.com/books/content?id=nLkNjsO7nIIC&printsec=frontcover&img=1&zoom=5" },
+  { title: "Outlive", author: "Peter Attia", isbn: "9780593236598" },
+  { title: "Feel Good Productivity", author: "Ali Abdaal" },
+  { title: "Good to Great", author: "Jim Collins", isbn: "9780066620992" },
+  { title: "Extreme Ownership", author: "Jocko Willink", isbn: "9781250183866" },
+  { title: "The Slight Edge", author: "Jeff Olson", isbn: "9781626340466" },
+  { title: "Irresistible", author: "Adam Alter", isbn: "9780735222847" },
+  { title: "What If?", author: "Randall Munroe", isbn: "9781848549562" },
+  { title: "What If? 2", author: "Randall Munroe", isbn: "9780525537113" },
+  { title: "The Power of Now", author: "Eckhart Tolle", isbn: "9781577314806" },
+  { title: "How To", author: "Randall Munroe", isbn: "9780525537090" },
+  { title: "Slow Productivity", author: "Cal Newport", isbn: "9780593544853" },
+  { title: "The 12 Week Year", author: "Brian Moran", isbn: "9781118509234" },
 ];
 
 export const projects: Project[] = [

@@ -152,15 +152,19 @@ function TimelineEntry({
                 transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
                 style={{ overflow: "hidden" }}
               >
-                <div
-                  className="mt-4 pt-4 text-xs leading-relaxed"
+                <ul
+                  className="mt-4 pt-4 space-y-2"
                   style={{
-                    color: "var(--muted)",
                     borderTop: "1px solid var(--border)",
                   }}
                 >
-                  {event.details}
-                </div>
+                  {event.details.split(". ").map(s => s.replace(/\.$/, "").trim()).filter(Boolean).map((point, i) => (
+                    <li key={i} className="flex items-start gap-2 text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
+                      <span className="mt-1 flex-shrink-0 w-1 h-1 rounded-full" style={{ background: color }} />
+                      {point}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             )}
           </AnimatePresence>

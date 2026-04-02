@@ -25,7 +25,7 @@ function BentoCard({
 
   return (
     <motion.div
-      className="group relative flex flex-col rounded-2xl overflow-hidden glass gradient-border"
+      className="group relative flex flex-col rounded-2xl overflow-hidden glass gradient-border cursor-pointer"
       initial={shouldReduce ? {} : { opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
@@ -107,6 +107,7 @@ function BentoCard({
                 aria-label="Live site"
                 className="transition-colors duration-200"
                 style={{ color: "var(--muted)" }}
+                onClick={(e) => e.stopPropagation()}
                 onMouseEnter={(e) =>
                   ((e.currentTarget as HTMLElement).style.color =
                     "var(--blue-accent)")
@@ -203,9 +204,15 @@ export default function Projects() {
         {/* Equal grid */}
         <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {projects.map((project, i) => (
-            <div key={project.id} style={{ minHeight: "16rem" }}>
+            <a
+              key={project.id}
+              href={project.github ?? project.live ?? "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ minHeight: "16rem", display: "block" }}
+            >
               <BentoCard project={project} index={i} featured={i === 0} />
-            </div>
+            </a>
           ))}
         </div>
       </div>
