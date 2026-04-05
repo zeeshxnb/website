@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { personalInfo } from "@/lib/data";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
@@ -57,16 +56,7 @@ export default function Navbar() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        <nav className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          {/* Logo */}
-          <a
-            href="#"
-            className="text-sm font-mono font-semibold tracking-widest uppercase"
-            style={{ color: "var(--blue-accent)" }}
-          >
-            {personalInfo.initials}
-          </a>
-
+        <nav className="px-6 h-16 flex items-center justify-end">
           {/* Desktop links */}
           <ul className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
