@@ -14,6 +14,16 @@ export const personalInfo: PersonalInfo = {
 
 export const timelineEvents: TimelineEvent[] = [
   {
+    id: "cerebras",
+    year: "June 2026 – Present",
+    title: "AIOps Infrastructure Engineer Intern",
+    organization: "Cerebras · Sunnyvale, CA",
+    type: "work",
+    summary: "Built ARIES, a full-stack asset platform in TypeScript, React, Fastify, and PostgreSQL 18 across 36 workflows.",
+    details:
+      "Designed a transactional layer of 175 tables, 45 views, and 570 indexes with role-based auth on 136 API routes. Built Beagle, an internal LLM agent chaining nine MCP servers to debug facilities and networking issues. Shipped a fail-closed CI/CD pipeline on Docker, Kubernetes/EKS, Terraform, and Argo CD with 1,168 tests.",
+  },
+  {
     id: "1",
     year: "May – Sept 2025",
     title: "Machine Learning Engineer Intern",
